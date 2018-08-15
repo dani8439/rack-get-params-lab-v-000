@@ -28,6 +28,8 @@ class Application
       if @@items.include?(add_on)
         @@items << add_on
         resp.write "added #{add_on}"
+      else
+        resp.write "We don't have that item"
 
     else
       resp.write "Path Not Found"
