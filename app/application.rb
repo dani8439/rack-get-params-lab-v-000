@@ -25,6 +25,9 @@ class Application
     elsif req.path.match(/add/)
       add_on = req.params["item"]
 
+      if @@items.include?(add_on)
+        resp.write "added #{add_on}"
+
     else
       resp.write "Path Not Found"
     end
