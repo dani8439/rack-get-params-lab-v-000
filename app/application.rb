@@ -26,6 +26,7 @@ class Application
       add_on = req.params["item"]
 
       if @@items.include?(add_on)
+        @@items << add_on
         resp.write "added #{add_on}"
 
     else
